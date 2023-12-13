@@ -40,6 +40,6 @@ testem.log
 Thumbs.db
 
 .nx/cache
-
+.angular
 .gradle
 *.log

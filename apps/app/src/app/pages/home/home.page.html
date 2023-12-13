@@ -1,0 +1,70 @@
+<ng-container *ngIf="userId === 0">
+  <ion-toolbar>
+    <ion-button (click)="onLoginClick(1)">Login</ion-button>
+  </ion-toolbar>
+</ng-container>
+<ng-container *ngIf="userId !== 0">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>Heute</ion-title>
+      <ion-title slot="end">{{habitsDoneCount}} / {{habitsCount}}</ion-title>
+      <ion-progress-bar [value]="progress"></ion-progress-bar>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Heute</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-list style="padding: 0">
+      <ion-item-sliding *ngFor="let habit of habits; trackBy: trackHabits">
+        <ion-item
+          class="habit"
+          [class.done]="habit.done"
+          [class.undone]="!habit.done"
+          [class.next]="nextHabit === habit"
+        >
+          <!--<ion-label slot="start" class="habit-icon"></ion-label> -->
+          <ion-label class="ion-text-wrap">
+            <span class="habit-icon">{{habit.icon}}</span>
+            <span class="habit-name">{{habit.readableName}}</span>
+          </ion-label>
+          <ion-icon
+            *ngIf="habit?.skippable"
+            slot="end"
+            name="play-forward-outline"
+            style="margin-left: 12px; font-size: 1em"
+          ></ion-icon>
+          <ion-icon
+            slot="end"
+            name="repeat-outline"
+            style="margin-left: 8px; font-size: 1em"
+          ></ion-icon>
+          <ion-icon
+            slot="end"
+            name="timer-outline"
+            [class.hide]="habit.done || !habit.automated"
+            style="position: relative; right: -4px; z-index: 10"
+          ></ion-icon>
+          <ion-checkbox
+            slot="end"
+            aria-label="[]"
+            [(ngModel)]="habit.done"
+            (ngModelChange)="onHabitStatusChange(habit)"
+          ></ion-checkbox>
+        </ion-item>
+        <ion-item-options>
+          <ion-item-option
+            style="padding-left: 25px; padding-right: 25px"
+            (pointerdown)="onHabitSkipClick(habit)"
+            [disabled]="!habit.skippable"
+          >
+            Überspringen
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </ion-content>
+</ng-container>

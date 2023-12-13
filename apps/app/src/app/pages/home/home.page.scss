@@ -1,0 +1,79 @@
+.toolbar-title-default {
+  padding-top: 100px;
+}
+
+.habit {
+  --ion-item-background: #1a1a1a;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 1);
+  transition: color 1000ms, font-size 1000ms;
+}
+
+.habit-icon {
+  margin-right: 10px;
+  font-size: 2em !important;
+  vertical-align: middle;
+}
+
+.habit-name {
+  vertical-align: middle;
+}
+
+.habit ion-label {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: all 500ms;
+}
+
+.habit ion-checkbox {
+  --size: 40px;
+  transition: all 500ms;
+}
+
+.habit.next {
+}
+
+.habit.done {
+  padding: 0px;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.habit.done ion-checkbox {
+  --size: 25px;
+}
+
+.habit.done ion-label {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.habit .checkbox-icon {
+  display: none !important;
+}
+
+.habit-icon {
+  font-size: 1.5em;
+  margin-left: 5px;
+}
+
+ion-progress-bar {
+  height: 6px;
+}
+
+ion-checkbox {
+  margin-left: -28px;
+}
+
+ion-label[slot="start"] {
+  flex: unset;
+}
+
+ion-label[slot="end"] {
+  flex: unset;
+  text-align: end;
+}
+
+.hide {
+  visibility: hidden;
+}

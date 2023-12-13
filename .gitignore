@@ -2,6 +2,7 @@
 
 # compiled output
 dist
+build
 tmp
 /out-tsc
 
@@ -39,3 +40,6 @@ testem.log
 Thumbs.db
 
 .nx/cache
+
+.gradle
+*.log

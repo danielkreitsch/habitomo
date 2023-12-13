@@ -16,6 +16,9 @@
     },
     "lint": {
       "cache": true
+    },
+    "install": {
+      "cache": true
     }
   },
   "namedInputs": {
@@ -27,5 +30,8 @@
       "default"
     ],
     "sharedGlobals": []
-  }
+  },
+  "plugins": [
+    "@nxrocks/nx-spring-boot"
+  ]
 }

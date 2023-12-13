@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "infra": "nx exec -- docker-compose -f tools/infra/docker-compose.yml up"
   },
+  "nx": {},
   "private": true,
   "devDependencies": {
     "@nx/js": "17.2.3",

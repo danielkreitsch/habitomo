@@ -1,0 +1,22 @@
+server:
+  port: ${PORT:8080}
+spring:
+  main.banner-mode: "off"
+  output.ansi.enabled: always
+  datasource:
+    url: "jdbc:mariadb://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DATABASE}?autoReconnect=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true"
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    database-platform: "org.hibernate.dialect.MariaDBDialect"
+    hibernate.ddl-auto: update
+    show-sql: false
+    open-in-view: false
+logging:
+  level:
+    root: info
+    org.springframework: info
+    dev.glowdragon: ${LOG_LEVEL:info}
+notion:
+  access-token: ${NOTION_ACCESS_TOKEN}

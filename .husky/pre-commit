@@ -1,0 +1,38 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+set +e
+
+GLOBAL_STATUS=0
+
+checkAndFormat() {
+    local checkCommand="$1"
+    local formatCommand="$2"
+    nx $checkCommand >.husky/pre-commit.log 2>&1
+    if [[ $? -eq 1 ]] ; then
+        echo "Incorrectly formatted files found."
+        nx $formatCommand >.husky/pre-commit.log
+        echo "Executed the command: nx $formatCommand"
+        GLOBAL_STATUS=1
+    fi
+}
+
+hasChangesInDir() {
+    local dir="$1"
+    [ -n "$(git status --porcelain "$dir")" ]
+}
+
+conditionalCheckAndFormat() {
+    local dir="$1"
+    local checkCommand="$2"
+    local formatCommand="$3"
+
+    if hasChangesInDir "$dir"; then
+        checkAndFormat "$checkCommand" "$formatCommand"
+    fi
+}
+
+checkAndFormat "format:check --uncommitted" "format:write --uncommitted"
+conditionalCheckAndFormat "apps/backend" "check-format backend" "apply-format backend"
+
+exit $GLOBAL_STATUS

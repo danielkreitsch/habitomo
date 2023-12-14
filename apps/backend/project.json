@@ -71,6 +71,15 @@
       "options": {
         "root": "apps/backend"
       }
+    },
+    "deploy": {
+      "executor": "nx-dokku:deploy-dist",
+      "dependsOn": ["build"],
+      "options": {
+        "path": "dist/apps/backend",
+        "host": "s1.glowdragon.de",
+        "app": "habitatomo-backend"
+      }
     }
   },
   "tags": []

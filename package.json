@@ -37,6 +37,8 @@
     "husky": "^8.0.0",
     "jsonc-eslint-parser": "^2.1.0",
     "nx": "17.2.3",
+    "nx-angular-env": "^1.0.0",
+    "nx-dokku": "^1.1.0",
     "prettier": "^2.6.2",
     "typescript": "~5.2.2"
   },

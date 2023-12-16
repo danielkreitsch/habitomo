@@ -8,6 +8,7 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
+      "dependsOn": ["prepare-env"],
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/app",
@@ -34,12 +35,6 @@
       },
       "configurations": {
         "production": {
-          "fileReplacements": [
-            {
-              "replace": "apps/app/src/environments/environment.ts",
-              "with": "apps/app/src/environments/environment.prod.ts"
-            }
-          ],
           "budgets": [
             {
               "type": "initial",
@@ -64,6 +59,7 @@
     },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
+      "dependsOn": ["prepare-env"],
       "configurations": {
         "production": {
           "buildTarget": "app:build:production"
@@ -172,6 +168,12 @@
         "android": {
           "cmd": "update android"
         }
+      }
+    },
+    "prepare-env": {
+      "executor": "nx-angular-env:prepare",
+      "options": {
+        "envFile": "apps/app/src/environment.ts"
       }
     }
   }

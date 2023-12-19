@@ -1,4 +1,4 @@
-package com.danielkreitsch.habitatomo.backend.day
+package com.danielkreitsch.habitomo.backend.day
 
 import jakarta.persistence.*
 import java.time.LocalDate

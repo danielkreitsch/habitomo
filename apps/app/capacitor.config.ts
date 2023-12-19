@@ -2,7 +2,7 @@ import { CapacitorConfig } from "@capacitor/cli"
 
 const config: CapacitorConfig = {
   appId: "io.ionic.starter",
-  appName: "habitatomo",
+  appName: "habitomo",
   webDir: "../../dist/apps/app",
   bundledWebRuntime: false,
   server: {

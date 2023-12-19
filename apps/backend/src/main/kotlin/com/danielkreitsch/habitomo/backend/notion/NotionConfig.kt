@@ -1,4 +1,4 @@
-package com.danielkreitsch.habitatomo.backend.notion
+package com.danielkreitsch.habitomo.backend.notion
 
 import org.hibernate.validator.constraints.Length
 import org.springframework.boot.context.properties.ConfigurationProperties

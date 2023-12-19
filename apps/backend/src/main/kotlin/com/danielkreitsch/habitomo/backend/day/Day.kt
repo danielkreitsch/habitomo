@@ -1,4 +1,4 @@
-package com.danielkreitsch.habitatomo.backend.day
+package com.danielkreitsch.habitomo.backend.day
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import java.time.LocalDate

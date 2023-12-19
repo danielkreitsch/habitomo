@@ -1,6 +1,5 @@
-package com.danielkreitsch.habitatomo.backend.day
+package com.danielkreitsch.habitomo.backend.day
 
-import com.danielkreitsch.habitatomo.backend.day.*
 import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.*
 

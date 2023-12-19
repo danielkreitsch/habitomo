@@ -1,4 +1,4 @@
-package com.danielkreitsch.habitatomo.backend.user
+package com.danielkreitsch.habitomo.backend.user
 
 import jakarta.servlet.http.*
 import org.slf4j.LoggerFactory

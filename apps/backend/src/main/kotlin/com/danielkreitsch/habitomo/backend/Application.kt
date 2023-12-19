@@ -1,4 +1,4 @@
-package com.danielkreitsch.habitatomo.backend
+package com.danielkreitsch.habitomo.backend
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

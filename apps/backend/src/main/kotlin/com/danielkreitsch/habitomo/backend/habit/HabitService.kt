@@ -1,7 +1,7 @@
-package com.danielkreitsch.habitatomo.backend.habit
+package com.danielkreitsch.habitomo.backend.habit
 
-import com.danielkreitsch.habitatomo.backend.notion.NotionService
-import com.danielkreitsch.habitatomo.backend.user.User
+import com.danielkreitsch.habitomo.backend.notion.NotionService
+import com.danielkreitsch.habitomo.backend.user.User
 import kotlinx.coroutines.runBlocking
 import org.jraf.klibnotion.model.emoji.Emoji
 import org.jraf.klibnotion.model.richtext.RichTextList

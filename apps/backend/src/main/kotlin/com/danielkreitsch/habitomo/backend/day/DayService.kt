@@ -1,6 +1,6 @@
-package com.danielkreitsch.habitatomo.backend.day
+package com.danielkreitsch.habitomo.backend.day
 
-import com.danielkreitsch.habitatomo.backend.habit.Habit
+import com.danielkreitsch.habitomo.backend.habit.Habit
 import java.time.LocalDate
 import java.time.LocalDateTime
 import org.slf4j.LoggerFactory

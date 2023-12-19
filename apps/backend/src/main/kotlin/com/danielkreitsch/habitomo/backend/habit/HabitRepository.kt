@@ -1,4 +1,4 @@
-package com.danielkreitsch.habitatomo.backend.habit
+package com.danielkreitsch.habitomo.backend.habit
 
 import java.util.*
 import org.springframework.data.repository.CrudRepository

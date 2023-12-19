@@ -1,4 +1,4 @@
-package com.danielkreitsch.habitatomo.backend.notion
+package com.danielkreitsch.habitomo.backend.notion
 
 import org.jraf.klibnotion.client.Authentication
 import org.jraf.klibnotion.client.ClientConfiguration

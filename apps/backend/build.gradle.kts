@@ -56,7 +56,7 @@ tasks.withType<Test> { useJUnitPlatform() }
 
 springBoot {
   buildInfo()
-  mainClass = "com.danielkreitsch.habitatomo.backend.ApplicationKt"
+  mainClass = "com.danielkreitsch.habitomo.backend.ApplicationKt"
 }
 
 publishing {

@@ -1,6 +1,6 @@
-package com.danielkreitsch.habitatomo.backend
+package com.danielkreitsch.habitomo.backend
 
-import com.danielkreitsch.habitatomo.backend.user.UserInterceptor
+import com.danielkreitsch.habitomo.backend.user.UserInterceptor
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer

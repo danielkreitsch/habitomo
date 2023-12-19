@@ -1,4 +1,4 @@
-package com.danielkreitsch.habitatomo.backend.habit
+package com.danielkreitsch.habitomo.backend.habit
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import java.time.LocalDateTime

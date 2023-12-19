@@ -1,7 +1,7 @@
-package com.danielkreitsch.habitatomo.backend.habit
+package com.danielkreitsch.habitomo.backend.habit
 
-import com.danielkreitsch.habitatomo.backend.day.DayService
-import com.danielkreitsch.habitatomo.backend.user.User
+import com.danielkreitsch.habitomo.backend.day.DayService
+import com.danielkreitsch.habitomo.backend.user.User
 import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.*
 

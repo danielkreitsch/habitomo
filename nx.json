@@ -1,15 +1,15 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "affected": {
-    "defaultBase": "master"
-  },
   "targetDefaults": {
     "build": {
       "cache": true,
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
     },
-    "lint": {
+    "install": {
+      "cache": true
+    },
+    "@nx/eslint:lint": {
       "cache": true,
       "inputs": [
         "default",
@@ -17,9 +17,6 @@
         "{workspaceRoot}/.eslintignore",
         "{workspaceRoot}/eslint.config.js"
       ]
-    },
-    "install": {
-      "cache": true
     }
   },
   "namedInputs": {
@@ -42,5 +39,7 @@
     "@nx/angular:component": {
       "style": "scss"
     }
-  }
+  },
+  "useInferencePlugins": false,
+  "defaultBase": "master"
 }

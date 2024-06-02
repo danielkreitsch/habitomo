@@ -42,4 +42,5 @@ Thumbs.db
 .nx/cache
 .angular
 .gradle
+.env
 *.log
